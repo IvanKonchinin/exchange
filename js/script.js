@@ -11,13 +11,9 @@ const chooseMoneyType = () => {
       resetInputs();
       let currentMoney = target.value;
       localStorage.setItem('currentMoney', currentMoney);
-      if(currentMoney === 'USD'){
-        rubLabel.textContent = 'Доллар США (USD)';
-        usdLabel.textContent = 'Российский рубль (RUB)';
-      } else {
-        rubLabel.textContent = 'Российский рубль (RUB)';
-        usdLabel.textContent = 'Доллар США (USD)';
-      }
+     
+      rubLabel.textContent = currentMoney === 'USD' ? 'Доллар США (USD)' : 'Российский рубль (RUB)';
+      usdLabel.textContent = currentMoney === 'USD' ? 'Российский рубль (RUB)' : 'Доллар США (USD)';
     }
   });
 };
@@ -65,15 +61,13 @@ const validateCalcInputs = () => {
   const validateInputs = document.querySelector('.out-wrap');
   validateInputs.addEventListener('input', (event) => {
     let target = event.target;
-    if (target.tagName === 'INPUT') {
-      target.value = target.value.replace(/\D/g, '');
-    }
+    if (target.tagName === 'INPUT') target.value = target.value.replace(/\D/g, ''); 
   });
 };
 validateCalcInputs();
 
 //resetInputs
 const resetInputs = () => {
-  const outCountMoney = document.getElementById('out-count-money').value = '';
-  const inCountMoney = document.getElementById('in-count-money').value = '';
+  document.getElementById('out-count-money').value = '';
+  document.getElementById('in-count-money').value = '';
 };
