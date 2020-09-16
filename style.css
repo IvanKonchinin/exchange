@@ -1,0 +1,18 @@
+label{
+  display: flex;
+  min-width: 180px;
+}
+input{
+  display: block;
+  max-width: 108px;
+}
+.out-wrap{
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin-top: 30px;
+}
+.out-wrap input{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

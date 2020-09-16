@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="form-exchange" name="form-exchange">
+    <div class="choose-money-wrap">
+    <h3>Выберите валюту</h3>
+    <label>
+      <input value="RUB" type="radio" name="money">
+      RUB
+    </label>
+    <label>
+        <input value="USD" type="radio" name="money">
+        USD
+    </label>
+    </div>
+    <div class="out-wrap">
+      <input type="text" id="in-count-money">
+      <label for="in-count-money" class="rub-label">Российский рубль (RUB)</label>
+
+      <input type="text" id="out-count-money" readonly>
+      <label for="out-count-money" class="usd-label">Доллар США (USD)</label>
+    
+    </div>
+    
+    <button type="submit" id="convert">Конвертировать</button>
+  </form>
+  <script src="js/script.js"></script>
+</body>
+</html>
